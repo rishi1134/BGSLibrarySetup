@@ -11,14 +11,20 @@ Dependencies:
 
 CMD COMMANDS : 
 ---------------------------------------------------------------------------------------------------------
+```
 git clone --recursive https://github.com/andrewssobral/bgslibrary.git
+
 cd bgslibrary\build
+```
+Make changes to the C++ code of BGSLibrary(if needed) before build.
 
-%Make changes to the C++ code of BGSLibrary(if needed) before build.%
-
+```
 set OpenCV_DIR="Path to your Opencv build folder i.e C:\OpenCVx.x.x\build"
+
 set PATH=%PATH%;%OpenCV_DIR%\x64\vc15\bin
+
 cmake -D OpenCV_DIR=%OpenCV_DIR% -D BGS_PYTHON_SUPPORT=ON -G "Visual Studio 15 2017 Win64" ..
+```
 ------------------------------------------------------------------------------------------------------------
 
 1) In the same directory i.e "bgslibrary\build" , open bgslibrary.sln in your Visual Studio 15 2017, 
@@ -28,8 +34,10 @@ cmake -D OpenCV_DIR=%OpenCV_DIR% -D BGS_PYTHON_SUPPORT=ON -G "Visual Studio 15 2
 
 -----------------------------------------------------------------------------------------------------------
 Possible Issues:
-If cv2 import error:
-  goto "opencv\build\python\cv2\'YOUR PYTHON VERSION FOLDER'\" and copy the ".pyd" in that folder to your "\bgslibrary" dir.
 
-Do add all the suggested paths in the cmd window ,after "Line 19 cmake" step to your environment variable.
+If cv2 import error
+
+    goto "opencv\build\python\cv2\'YOUR PYTHON VERSION FOLDER'\" and copy the ".pyd" in that folder to your "\bgslibrary" dir.
+
+Do add all the suggested paths in the cmd window ,after "cmake step" to your environment variable.
 For output log at the end of cmake step,check [https://github.com/andrewssobral/bgslibrary/wiki/Wrapper:-Python]
