@@ -1,6 +1,9 @@
 # BGSLibrarySetup
-[For WINDOWS]
+
+[Steps For WINDOWS]
+
 Safe to do these in virtualenv.
+
 HOW-TO [https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/]
 
 Dependencies:
