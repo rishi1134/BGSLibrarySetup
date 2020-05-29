@@ -44,3 +44,15 @@ If cv2 import error
 
 Do add all the suggested paths in the cmd window ,after "cmake step" to your environment variable.
 For output log at the end of cmake step,check [https://github.com/andrewssobral/bgslibrary/wiki/Wrapper:-Python]
+
+-----------------------------------------------------------------------------------------------------------
+WITH CUDA SUPPORT:
+
+1) Choose CUDA in the bgslibrary_core build dependencies\build customization.
+2) GoTo project properties\Linker\Input\Addn Dependencies\ and add these .lib files
+cudart.lib
+cudadevrt.lib
+cudart_static.lib
+3) Add subsense.cu file to bgslibrary_core\Source files
+4) Add subsense.cuh file to bgslibrary_core\Header files
+-----------------------------------------------------------------------------------------------------------
